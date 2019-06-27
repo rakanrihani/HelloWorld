@@ -1,0 +1,92 @@
+
+/**
+* Guessing game assignment
+* 
+* @Rakan Rihani
+* @June 25, 2019
+*/
+import java.util.*;
+
+public class guessingGame
+{
+
+    public static void main(String args[]){
+        {
+    boolean keepGoing=true;
+    while(keepGoing==true){
+
+        int rnd;
+        int guessInt;
+        int max = 10;
+        int min = 1;
+        int randomNum = (int)(Math.random() * ((max - min) + 1)) + min; //inclusive
+
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("This is the one and only guessing game");
+
+
+         int guess;
+         Scanner in = new Scanner(System.in);
+        System.out.println("Please guess a number between 1 and 10");
+        guess = in.nextInt();
+    
+        System.out.println("You guessed the number: " + guess);
+
+        if(guess==randomNum)
+        {
+            System.out.println("Great job you guessed the random number!");
+        }
+        else
+        {
+            System.out.println("That is incorrect, guess again");
+        }
+
+        
+         int guesstwo;
+        System.out.println("Please guess another number between 1 and 10");
+        guesstwo = in.nextInt();
+    
+        System.out.println("You guessed the number: " + guesstwo);
+
+        if(guesstwo==randomNum)
+        {
+            System.out.println("Great job you guessed the random number!");
+        }
+        else
+        {
+            System.out.println("That is incorrect, guess again");
+        }
+
+        
+
+         int guessthree;
+        System.out.println("This is your final try, please guess one last number between 1 and 10");
+        guessthree = in.nextInt();
+    
+        System.out.println("You guessed the number: " + guess);    
+
+
+        if(guessthree==randomNum)
+        {
+            System.out.println("Great job you guessed the random number!");
+        }
+        else
+        {
+            System.out.println("That is incorrect, you failed");
+        }
+        
+            Scanner play = new Scanner(System.in);
+        System.out.println("Would you like to play again? type Y if you would.");
+        String playAgain = play.nextLine();
+        if(playAgain.equals("Y")){
+            keepGoing = true;
+            System.out.println("Let's do it again!");
+        }else{
+            System.out.println("Thanks for converting. See you next time!");
+            keepGoing = false;
+           }
+    }
+    }
+}
+}
